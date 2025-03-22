@@ -1,0 +1,190 @@
+/* Screens larger than > 840 px */
+.custom-container {
+	width: 80%;
+	margin-right: 0px;
+	padding-right: 0px;
+}
+
+.custom-header-container {
+	max-width: 100%;
+	padding: 0px 50px;
+}
+
+.container > p {
+	line-height: 2em;
+}
+
+.custom-article-box {
+	padding-right: 40px;
+}
+
+.services .card {
+	border: 0px;
+	text-align: center;
+	background: #fefefe;
+	box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
+	padding: 40px 20px;
+	transition: all ease-in-out 0.3s;
+}
+
+.services .card:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.services .card p {
+	line-height: 24px;
+	font-size: 14px;
+	text-align: center;
+}
+
+/* logo section */
+#logos {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-top: 20px;
+	white-space: nowrap;
+	display: table;
+}
+
+.logo-image {
+	vertical-align: middle;
+	padding: 13px;
+	display: table-cell;
+}
+
+.logo-image img {
+	max-width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 840px) {
+	.custom-container {
+		width: 80%;
+	}
+
+	.custom-header-container {
+		max-width: 100%;
+		padding: 0px 20px;
+	}
+
+	.container > p {
+		line-height: 2em;
+	}
+
+	.custom-h2 {
+		font-size: 14px;
+	}
+
+	/* logo section */
+	#logos {
+		/* position: absolute; */
+		/* height: 105px; */
+		/* background-color: #eee; */
+		white-space: nowrap;
+		width: 100%;
+		display: table;
+	}
+
+	.logo-image {
+		vertical-align: middle;
+		padding: 13px;
+		display: table-cell;
+	}
+
+	.logo-image img {
+		max-width: 100%;
+	}
+}
+
+/* Mobile Phones */
+@media (max-width: 420px) {
+	.custom-container {
+		width: 100%;
+		max-width: 100%;
+		font-size: 12px;
+		padding: 0px 10px;
+	}
+
+	.custom-header-container {
+		max-width: 100%;
+		padding: 0px 20px;
+	}
+
+	#header .logo a {
+		font-size: 14px;
+	}
+
+	#hero .carousel-container {
+		left: 20px;
+		right: 20px;
+		padding: 0px;
+	}
+
+	.custom-h2 {
+		font-size: 12px !important;
+	}
+
+	/* logo section */
+	#logos {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		padding-top: 0px;
+		white-space: nowrap;
+		width: 100%;
+		display: table;
+	}
+
+	#logo-bigearth {
+		padding-right: 5%;
+	}
+
+	.logo-image {
+		vertical-align: middle;
+		padding: 0px;
+		display: table-cell;
+	}
+
+	.logo-image img {
+		max-width: 100%;
+	}
+
+	#mainText {
+		width: 100%;
+		padding-top: 20px;
+	}
+
+	#mainText p {
+		line-height: 1.5em;
+	}
+
+	/* show all the time */
+	.team .member .member-info {
+		background: linear-gradient(0deg, rgba(11, 35, 65, 0.9) 0%, rgba(11, 35, 65, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
+		opacity: 1;
+		transition: 0.4s;
+	  }
+
+	  .team .member .member-info-content {
+		bottom: 30px;
+		transition: bottom 0.4s;
+	  }
+
+	  .team .member .social {
+		left: 0;
+		transition: left ease-in-out 0.3s;
+	  }
+
+}
+
+.blue-strip {
+    background-color: #070784;; /* Bootstrap primary blue */
+    color: white;
+    padding: 15px 50px;
+    border-radius: 5px;
+    text-align: left;
+    margin: 0 auto; /* Center the strip horizontally */
+    font-size: 18px; /* Adjust font size for compactness */
+    line-height: 2.5; /* Improve readability with tighter line spacing */
+  }

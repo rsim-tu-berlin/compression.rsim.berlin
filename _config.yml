@@ -1,0 +1,25 @@
+title: Learning-based Compression and <br />Compressed Domain Analysis<br />in Remote Sensing 
+baseurl: ""
+url: https://compression.rsim.berlin
+description: >- # this means to ignore newlines until next key
+  ...
+short_description: >-
+  ...
+  ...
+  ...
+links_bigearth: https://bigearth.eu
+links_rsim: https://rsim.berlin
+links_erc: https://erc.europa.eu
+links_tuberlin: https://tu.berlin
+collections_dir: content
+collections:
+  software:
+    output: true
+  publications:
+
+    output: true
+    
+publications:
+  journals: "International Journals"
+  conferences: "International Conferences"
+  books: "Book Chapters"

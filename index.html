@@ -1,0 +1,114 @@
+---
+id: 1
+title: index
+author: RSiM
+layout: page
+guid: https://compression.rsim.berlin
+permalink: /
+---
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12" style="position: relative; margin-top: 70px;">
+        <div class="blue-strip">
+          <p>
+            Explore our publications and software on: <br />
+            <ul>
+              <li>
+                Learning-based compression for efficient data storage and transmission in remote sensing (RS).
+              </li>
+              <li>
+                Learning from compressed domain to perform RS tasks directly on latent representations.
+            </ul>
+            Stay tuned for updates on our latest research.<br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section page-publications-section">
+  <div class="container">
+    {% assign pubs = site.publications | group_by_exp:"pub", "pub.type" | sort: "name" | reverse %}
+
+    {% assign counter = 0 %}
+    {% for pub in pubs %}
+
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex align-items-center section-title justify-content-between">
+            <a id="{{ pub.name }}"></a>
+            <h2 class="mb-0 text-nowrap mr-3">Publications on {{ site.data.mapping.publications[pub.name] }}</h2>
+            <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+          </div>
+          <!-- <div class="w-100 border-1 bg-light p-2 mb-2">
+            *: equal contribution
+          </div> -->
+        </div>
+      </div>
+     
+      {% assign sorted_pubs = pub.items | sort: "path" | reverse %}
+      {% for pub in sorted_pubs %}
+      {% assign counter = counter | plus:1 %}
+      <!-- pub pdf link --> 
+      {% if pub.pdf_link %}
+      {%    assign check = pub.pdf_link | split:':' | first %}
+      {%    if check == 'https' or check == 'http' %}
+      {%      assign pub.pdf_link = pub.pdf_link %}
+      {%    else %}
+      {%      assign pub.pdf_link = site.baseurl | append: '/assets/data/pdf/' | append: pub.pdf_link %}
+      {%    endif %}
+      {% endif %}
+      <div class="row mb-5">
+        <div class="col-lg-3 col-md-4">
+          {% if pub.image %}
+          <img class="publication-image pl-3 w-100" src="{{ site.baseurl }}/assets/img/publications/{{ pub.image }}" />
+          {% else %}
+          <p class='w-100 h-100'></p>
+          {% endif %}
+        </div>
+        <div class="col-lg-9 col-md-8">
+          {% if pub.pdf_link %}
+          <a href="{{ pub.pdf_link }}" target="_blank">
+            <h5>{{ pub.title }}</h5>
+          </a>
+          {% else %}
+          <h5>{{ pub.title }}</h5>
+          {% endif %}
+          <p>{{ pub.authors }}<br /><i>{{ pub.published_at }}</i>.</p>
+          <p>
+            <!-- <a data-toggle="collapse" href="#collapseExample_{{ counter }}" role="button" aria-expanded="false" aria-controls="collapseExample_{{ counter }}">
+              Bibtex
+            </a> -->
+            {% if pub.bibtex_link %}
+            <a href="{{ site.baseurl }}/assets/data/bibtex/{{ pub.bibtex_link }}"><i class="fas fa-sticky-note m-2"></i>Bibtex</a>
+            {% endif %}
+            {% if pub.pdf_link %}
+            <a href="{{ pub.pdf_link }}" target="_blank"><i class="fas fa-file-pdf m-2"></i>PDF</a>
+            {% endif %}
+            {% if pub.git_link %}
+            <a href="{{ pub.git_link }}" target="_blank"><i class="fab fa-gitlab m-2"></i>Git</a>
+            {% endif %}
+            {% if pub.guide_link %}
+            <a href="{{ pub.guide_link }}" target="_blank"><i class="fas fa-link m-2"></i>Guide</a>
+            {% endif %}
+            {% if pub.web_site_link %}
+            <a href="{{ pub.web_site_link }}" target="_blank"><i class="fas fa-link m-2"></i>Web Site</a>
+            {% endif %}
+          </p>
+
+          {% if pub.authors contains "*" %}
+          <p class="font-italic mb-0 small text-black-50">* Equal contribution</p>
+          {% endif %}
+
+        </div>
+      </div>
+
+        {% endfor %}
+      {% endfor %}
+    </div>
+
+  </div> <!-- container -->
+</section>
