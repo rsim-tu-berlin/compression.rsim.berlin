@@ -1,13 +1,13 @@
 ---
 type: learning_based
-title: "Learning-Based Hyperspectral Image Compression Using A Spatio-Spectral Approach"
+title: "HyCoT: A Transformer-Based Autoencoder for Hyperspectral Image Compression"
 year: 2024
-authors: Niklas Sprengel, Martin Hermann Paul Fuchs, Begüm Demir
-published_at: EGU General Assembly, Vienna, Austria, 2024
+authors: Martin Hermann Paul Fuchs, Behnood Rasti, Begüm Demir
+published_at: "IEEE GRSS Workshop on Hyperspectral Image and Signal Processing: Evolution in Remote Sensing (WHISPERS), Helsinki, Finland, 2024"
 
 image: 2024-conferences-2.png
 bibtex_link:
-pdf_link: https://meetingorganizer.copernicus.org/EGU24/EGU24-19198.html?pdf
-git_link:
+pdf_link: https://arxiv.org/abs/2408.08700
+git_link: https://git.tu-berlin.de/rsim/hycot
 
 ---
