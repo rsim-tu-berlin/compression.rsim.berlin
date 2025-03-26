@@ -95,6 +95,10 @@
 	.logo-image img {
 		max-width: 100%;
 	}
+
+	.logo-text {
+		font-size: 12px;
+	}
 }
 
 /* Mobile Phones */
@@ -148,6 +152,10 @@
 
 	.logo-image img {
 		max-width: 100%;
+	}
+
+	.logo-text {
+		font-size: 12px;
 	}
 
 	#mainText {
