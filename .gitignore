@@ -6,3 +6,7 @@ _site/**
 _posts/**
 
 **/_archive/**
+
+vendor/**
+
+.bundle
