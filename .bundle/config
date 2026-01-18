@@ -1,2 +1,0 @@
----
-BUNDLE_BUILD__EVENTMACHINE: "--with-cppflags=-I/opt/homebrew/Cellar/openssl@3/3.4.1"
